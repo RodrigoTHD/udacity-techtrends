@@ -1,38 +1,34 @@
 # Techtrends app
 
-### Build
-```cmd
-docker build ./ -t techtrends
-```
-
-### Start
-
-Run the command below to start the application with 
-
-```cmd
-docker container run  -d -p 3111:3111 techtrends
-```
-
-
-# Available Scripts
+## Available Scripts
 
 In the project directory, you can run:
 
-## Build
 
-Build the container with tag name `techtrends`.
+### Build
 
-```cmd
-docker build ./ -t techtrends
-```
-
-## Launch
-
-Runs the app in the development mode.
+Docker command used to build the application.
 
 ```cmd
-docker container run  -d -p 3111:3111 techtrends
+docker build -t techtrends .
 ```
 
-Open the application at the address [http://127.0.0.1:3111](http://127.0.0.1:3111) in the browser.
+### Run
+
+Docker command used to run the application with port `7111`.
+
+```cmd
+docker run --name techtrends -d -p 7111:3111 techtrends
+```
+
+### Logs
+
+Docker command used to get the application logs.
+
+```cmd
+docker logs techtrends
+```
+### Launch
+
+After execute the run command. open the application at the address [http://127.0.0.1:7111](http://127.0.0.1:7111) in the browser.
 
