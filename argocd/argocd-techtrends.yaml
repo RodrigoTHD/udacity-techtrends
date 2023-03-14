@@ -1,0 +1,20 @@
+  apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metadata:
+    name: techtrends
+    namespace: sandbox
+  spec:
+    project: default
+    source:
+      repoURL: https://github.com/RodrigoTHD/udacity-techtrends
+      targetRevision: HEAD
+      path: kubernetes
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: default
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+        - Validate=false
