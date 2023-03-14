@@ -10,11 +10,6 @@
       targetRevision: HEAD
       path: kubernetes
     destination:
-      server: https://kubernetes.default.svc
       namespace: default
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-      syncOptions:
-        - Validate=false
+      server: https://kubernetes.default.svc
+    syncPolicy: {}
